@@ -17,7 +17,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     let configuration = ARWorldTrackingConfiguration()
     let motionManager = CMMotionManager()
     var vehicle       = SCNPhysicsVehicle()
+    
     var orientation: CGFloat = 0
+    var touched: Bool        = false
+    var accelerationValues   = [UIAccelerationValue(0), UIAccelerationValue(0)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         self.sceneView.showsStatistics = true
         
         self.setupAccelerometer()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.touched = true
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.touched = false
     }
     
     func createConcrete(planeAnchor: ARPlaneAnchor) -> SCNNode {
@@ -81,12 +92,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let location                = SCNVector3(transform.m41, transform.m42, transform.m43)
         let currentPositionOfCamera = orientation + location
         
-        let scene   = SCNScene(named: "CarScene.scn")
-        let frame = scene?.rootNode.childNode(withName: "frame", recursively: false) ?? SCNNode()
+        let scene   = SCNScene(named: "Car-Scene.scn")
+        let frame = scene?.rootNode.childNode(withName: "chassis", recursively: false) ?? SCNNode()
         frame.position = currentPositionOfCamera
         
         let body = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: frame,
                                                                          options: [SCNPhysicsShape.Option.keepAsCompound: true]))
+        body.mass = 1
         frame.physicsBody = body
         
         let v_frontLeftWheel  = SCNPhysicsVehicleWheel(node: frame.childNode(withName: "frontLeftParent",
@@ -107,8 +119,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didSimulatePhysicsAtTime time: TimeInterval) {
-        self.vehicle.setSteeringAngle(orientation, forWheelAt: 2)
-        self.vehicle.setSteeringAngle(orientation, forWheelAt: 3)
+        var engineForce: CGFloat = 0
+        
+        self.vehicle.setSteeringAngle(-orientation, forWheelAt: 2)
+        self.vehicle.setSteeringAngle(-orientation, forWheelAt: 3)
+        
+        if touched { engineForce = 5 } else { engineForce = 0 }
+        self.vehicle.applyEngineForce(engineForce, forWheelAt: 0)
+        self.vehicle.applyEngineForce(engineForce, forWheelAt: 1)
     }
     
     func setupAccelerometer() {
@@ -129,11 +147,20 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func accelerometerDidChange(acceleration: CMAcceleration) {
-        if acceleration.x > 0 {
-            self.orientation = -CGFloat(acceleration.y)
+        accelerationValues[1] = filtered(currentAcceleration: accelerationValues[1],
+                                         updatedAcceleration: acceleration.y)
+        accelerationValues[0] = filtered(currentAcceleration: accelerationValues[0],
+                                         updatedAcceleration: acceleration.x)
+        if accelerationValues[0] > 0 {
+            self.orientation = -CGFloat(accelerationValues[1])
         } else {
-            self.orientation = CGFloat(acceleration.y)
+            self.orientation = CGFloat(accelerationValues[1])
         }
+    }
+    
+    func filtered(currentAcceleration: Double, updatedAcceleration: Double) -> Double {
+        let kfilteringFactor = 0.5
+        return updatedAcceleration * kfilteringFactor + currentAcceleration * (1 - kfilteringFactor)
     }
     
 }
