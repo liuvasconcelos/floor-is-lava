@@ -17,6 +17,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     let configuration = ARWorldTrackingConfiguration()
     let motionManager = CMMotionManager()
     var vehicle       = SCNPhysicsVehicle()
+    var orientation: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         self.sceneView.debugOptions = [SCNDebugOptions.showWorldOrigin, SCNDebugOptions.showFeaturePoints]
         self.sceneView.session.run(configuration)
+        self.sceneView.showsStatistics = true
         
         self.setupAccelerometer()
     }
@@ -104,6 +106,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.scene.rootNode.addChildNode(frame)
     }
     
+    func renderer(_ renderer: SCNSceneRenderer, didSimulatePhysicsAtTime time: TimeInterval) {
+        self.vehicle.setSteeringAngle(orientation, forWheelAt: 2)
+        self.vehicle.setSteeringAngle(orientation, forWheelAt: 3)
+    }
+    
     func setupAccelerometer() {
         if motionManager.isAccelerometerAvailable {
             motionManager.accelerometerUpdateInterval = 1/60
@@ -122,9 +129,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func accelerometerDidChange(acceleration: CMAcceleration) {
-        print(acceleration.x)
-        print(acceleration.y)
-        print(" ")
+        if acceleration.x > 0 {
+            self.orientation = -CGFloat(acceleration.y)
+        } else {
+            self.orientation = CGFloat(acceleration.y)
+        }
     }
     
 }
