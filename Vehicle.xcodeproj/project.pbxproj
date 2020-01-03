@@ -13,6 +13,7 @@
 		5326094823BE8D0400AD7123 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5326094623BE8D0400AD7123 /* Main.storyboard */; };
 		5326094A23BE8D0500AD7123 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5326094923BE8D0500AD7123 /* Assets.xcassets */; };
 		5326094D23BE8D0500AD7123 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5326094B23BE8D0500AD7123 /* LaunchScreen.storyboard */; };
+		53C7F4E823BF79900062FC7C /* CarScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = 53C7F4E723BF79900062FC7C /* CarScene.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5326094923BE8D0500AD7123 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5326094C23BE8D0500AD7123 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5326094E23BE8D0500AD7123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53C7F4E723BF79900062FC7C /* CarScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = CarScene.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				5326094923BE8D0500AD7123 /* Assets.xcassets */,
 				5326094B23BE8D0500AD7123 /* LaunchScreen.storyboard */,
 				5326094E23BE8D0500AD7123 /* Info.plist */,
+				53C7F4E723BF79900062FC7C /* CarScene.scn */,
 			);
 			path = Vehicle;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53C7F4E823BF79900062FC7C /* CarScene.scn in Resources */,
 				5326094D23BE8D0500AD7123 /* LaunchScreen.storyboard in Resources */,
 				5326094A23BE8D0500AD7123 /* Assets.xcassets in Resources */,
 				5326094823BE8D0400AD7123 /* Main.storyboard in Resources */,
