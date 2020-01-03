@@ -13,29 +13,10 @@
 		5326094823BE8D0400AD7123 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5326094623BE8D0400AD7123 /* Main.storyboard */; };
 		5326094A23BE8D0500AD7123 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5326094923BE8D0500AD7123 /* Assets.xcassets */; };
 		5326094D23BE8D0500AD7123 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5326094B23BE8D0500AD7123 /* LaunchScreen.storyboard */; };
-		5326095823BE8D0600AD7123 /* FloorIsLavaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5326095723BE8D0600AD7123 /* FloorIsLavaTests.swift */; };
-		5326096323BE8D0600AD7123 /* FloorIsLavaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5326096223BE8D0600AD7123 /* FloorIsLavaUITests.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5326095423BE8D0600AD7123 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5326093523BE8D0400AD7123 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5326093C23BE8D0400AD7123;
-			remoteInfo = FloorIsLava;
-		};
-		5326095F23BE8D0600AD7123 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5326093523BE8D0400AD7123 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5326093C23BE8D0400AD7123;
-			remoteInfo = FloorIsLava;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		5326093D23BE8D0400AD7123 /* FloorIsLava.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloorIsLava.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5326093D23BE8D0400AD7123 /* Vehicle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vehicle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5326094023BE8D0400AD7123 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5326094223BE8D0400AD7123 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5326094423BE8D0400AD7123 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,30 +24,10 @@
 		5326094923BE8D0500AD7123 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5326094C23BE8D0500AD7123 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5326094E23BE8D0500AD7123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5326095323BE8D0600AD7123 /* FloorIsLavaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloorIsLavaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5326095723BE8D0600AD7123 /* FloorIsLavaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorIsLavaTests.swift; sourceTree = "<group>"; };
-		5326095923BE8D0600AD7123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5326095E23BE8D0600AD7123 /* FloorIsLavaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloorIsLavaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5326096223BE8D0600AD7123 /* FloorIsLavaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorIsLavaUITests.swift; sourceTree = "<group>"; };
-		5326096423BE8D0600AD7123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5326093A23BE8D0400AD7123 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5326095023BE8D0600AD7123 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5326095B23BE8D0600AD7123 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,9 +40,7 @@
 		5326093423BE8D0400AD7123 = {
 			isa = PBXGroup;
 			children = (
-				5326093F23BE8D0400AD7123 /* FloorIsLava */,
-				5326095623BE8D0600AD7123 /* FloorIsLavaTests */,
-				5326096123BE8D0600AD7123 /* FloorIsLavaUITests */,
+				5326093F23BE8D0400AD7123 /* Vehicle */,
 				5326093E23BE8D0400AD7123 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,14 +48,12 @@
 		5326093E23BE8D0400AD7123 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5326093D23BE8D0400AD7123 /* FloorIsLava.app */,
-				5326095323BE8D0600AD7123 /* FloorIsLavaTests.xctest */,
-				5326095E23BE8D0600AD7123 /* FloorIsLavaUITests.xctest */,
+				5326093D23BE8D0400AD7123 /* Vehicle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5326093F23BE8D0400AD7123 /* FloorIsLava */ = {
+		5326093F23BE8D0400AD7123 /* Vehicle */ = {
 			isa = PBXGroup;
 			children = (
 				5326094023BE8D0400AD7123 /* AppDelegate.swift */,
@@ -107,33 +64,15 @@
 				5326094B23BE8D0500AD7123 /* LaunchScreen.storyboard */,
 				5326094E23BE8D0500AD7123 /* Info.plist */,
 			);
-			path = FloorIsLava;
-			sourceTree = "<group>";
-		};
-		5326095623BE8D0600AD7123 /* FloorIsLavaTests */ = {
-			isa = PBXGroup;
-			children = (
-				5326095723BE8D0600AD7123 /* FloorIsLavaTests.swift */,
-				5326095923BE8D0600AD7123 /* Info.plist */,
-			);
-			path = FloorIsLavaTests;
-			sourceTree = "<group>";
-		};
-		5326096123BE8D0600AD7123 /* FloorIsLavaUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5326096223BE8D0600AD7123 /* FloorIsLavaUITests.swift */,
-				5326096423BE8D0600AD7123 /* Info.plist */,
-			);
-			path = FloorIsLavaUITests;
+			path = Vehicle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5326093C23BE8D0400AD7123 /* FloorIsLava */ = {
+		5326093C23BE8D0400AD7123 /* Vehicle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5326096723BE8D0600AD7123 /* Build configuration list for PBXNativeTarget "FloorIsLava" */;
+			buildConfigurationList = 5326096723BE8D0600AD7123 /* Build configuration list for PBXNativeTarget "Vehicle" */;
 			buildPhases = (
 				5326093923BE8D0400AD7123 /* Sources */,
 				5326093A23BE8D0400AD7123 /* Frameworks */,
@@ -143,46 +82,10 @@
 			);
 			dependencies = (
 			);
-			name = FloorIsLava;
+			name = Vehicle;
 			productName = FloorIsLava;
-			productReference = 5326093D23BE8D0400AD7123 /* FloorIsLava.app */;
+			productReference = 5326093D23BE8D0400AD7123 /* Vehicle.app */;
 			productType = "com.apple.product-type.application";
-		};
-		5326095223BE8D0600AD7123 /* FloorIsLavaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5326096A23BE8D0600AD7123 /* Build configuration list for PBXNativeTarget "FloorIsLavaTests" */;
-			buildPhases = (
-				5326094F23BE8D0600AD7123 /* Sources */,
-				5326095023BE8D0600AD7123 /* Frameworks */,
-				5326095123BE8D0600AD7123 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5326095523BE8D0600AD7123 /* PBXTargetDependency */,
-			);
-			name = FloorIsLavaTests;
-			productName = FloorIsLavaTests;
-			productReference = 5326095323BE8D0600AD7123 /* FloorIsLavaTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		5326095D23BE8D0600AD7123 /* FloorIsLavaUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5326096D23BE8D0600AD7123 /* Build configuration list for PBXNativeTarget "FloorIsLavaUITests" */;
-			buildPhases = (
-				5326095A23BE8D0600AD7123 /* Sources */,
-				5326095B23BE8D0600AD7123 /* Frameworks */,
-				5326095C23BE8D0600AD7123 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5326096023BE8D0600AD7123 /* PBXTargetDependency */,
-			);
-			name = FloorIsLavaUITests;
-			productName = FloorIsLavaUITests;
-			productReference = 5326095E23BE8D0600AD7123 /* FloorIsLavaUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -197,17 +100,9 @@
 					5326093C23BE8D0400AD7123 = {
 						CreatedOnToolsVersion = 11.3;
 					};
-					5326095223BE8D0600AD7123 = {
-						CreatedOnToolsVersion = 11.3;
-						TestTargetID = 5326093C23BE8D0400AD7123;
-					};
-					5326095D23BE8D0600AD7123 = {
-						CreatedOnToolsVersion = 11.3;
-						TestTargetID = 5326093C23BE8D0400AD7123;
-					};
 				};
 			};
-			buildConfigurationList = 5326093823BE8D0400AD7123 /* Build configuration list for PBXProject "FloorIsLava" */;
+			buildConfigurationList = 5326093823BE8D0400AD7123 /* Build configuration list for PBXProject "Vehicle" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -220,9 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5326093C23BE8D0400AD7123 /* FloorIsLava */,
-				5326095223BE8D0600AD7123 /* FloorIsLavaTests */,
-				5326095D23BE8D0600AD7123 /* FloorIsLavaUITests */,
+				5326093C23BE8D0400AD7123 /* Vehicle */,
 			);
 		};
 /* End PBXProject section */
@@ -235,20 +128,6 @@
 				5326094D23BE8D0500AD7123 /* LaunchScreen.storyboard in Resources */,
 				5326094A23BE8D0500AD7123 /* Assets.xcassets in Resources */,
 				5326094823BE8D0400AD7123 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5326095123BE8D0600AD7123 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5326095C23BE8D0600AD7123 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,36 +144,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5326094F23BE8D0600AD7123 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5326095823BE8D0600AD7123 /* FloorIsLavaTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5326095A23BE8D0600AD7123 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5326096323BE8D0600AD7123 /* FloorIsLavaUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5326095523BE8D0600AD7123 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5326093C23BE8D0400AD7123 /* FloorIsLava */;
-			targetProxy = 5326095423BE8D0600AD7123 /* PBXContainerItemProxy */;
-		};
-		5326096023BE8D0600AD7123 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5326093C23BE8D0400AD7123 /* FloorIsLava */;
-			targetProxy = 5326095F23BE8D0600AD7123 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5326094623BE8D0400AD7123 /* Main.storyboard */ = {
@@ -436,7 +286,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L9CMSL6QFV;
-				INFOPLIST_FILE = FloorIsLava/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Vehicle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +304,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L9CMSL6QFV;
-				INFOPLIST_FILE = FloorIsLava/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Vehicle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,94 +316,10 @@
 			};
 			name = Release;
 		};
-		5326096B23BE8D0600AD7123 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L9CMSL6QFV;
-				INFOPLIST_FILE = FloorIsLavaTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.liuvasconcelos.FloorIsLavaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloorIsLava.app/FloorIsLava";
-			};
-			name = Debug;
-		};
-		5326096C23BE8D0600AD7123 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L9CMSL6QFV;
-				INFOPLIST_FILE = FloorIsLavaTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.liuvasconcelos.FloorIsLavaTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FloorIsLava.app/FloorIsLava";
-			};
-			name = Release;
-		};
-		5326096E23BE8D0600AD7123 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L9CMSL6QFV;
-				INFOPLIST_FILE = FloorIsLavaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.liuvasconcelos.FloorIsLavaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FloorIsLava;
-			};
-			name = Debug;
-		};
-		5326096F23BE8D0600AD7123 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L9CMSL6QFV;
-				INFOPLIST_FILE = FloorIsLavaUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.liuvasconcelos.FloorIsLavaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FloorIsLava;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5326093823BE8D0400AD7123 /* Build configuration list for PBXProject "FloorIsLava" */ = {
+		5326093823BE8D0400AD7123 /* Build configuration list for PBXProject "Vehicle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5326096523BE8D0600AD7123 /* Debug */,
@@ -562,29 +328,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5326096723BE8D0600AD7123 /* Build configuration list for PBXNativeTarget "FloorIsLava" */ = {
+		5326096723BE8D0600AD7123 /* Build configuration list for PBXNativeTarget "Vehicle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5326096823BE8D0600AD7123 /* Debug */,
 				5326096923BE8D0600AD7123 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5326096A23BE8D0600AD7123 /* Build configuration list for PBXNativeTarget "FloorIsLavaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5326096B23BE8D0600AD7123 /* Debug */,
-				5326096C23BE8D0600AD7123 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5326096D23BE8D0600AD7123 /* Build configuration list for PBXNativeTarget "FloorIsLavaUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5326096E23BE8D0600AD7123 /* Debug */,
-				5326096F23BE8D0600AD7123 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
