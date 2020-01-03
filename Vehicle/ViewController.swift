@@ -8,12 +8,15 @@
 
 import UIKit
 import ARKit
+import CoreMotion
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet weak var sceneView: ARSCNView!
     
     let configuration = ARWorldTrackingConfiguration()
+    let motionManager = CMMotionManager()
+    var vehicle       = SCNPhysicsVehicle()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +25,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         self.sceneView.debugOptions = [SCNDebugOptions.showWorldOrigin, SCNDebugOptions.showFeaturePoints]
         self.sceneView.session.run(configuration)
+        
+        self.setupAccelerometer()
     }
     
     func createConcrete(planeAnchor: ARPlaneAnchor) -> SCNNode {
@@ -82,7 +87,44 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                                                                          options: [SCNPhysicsShape.Option.keepAsCompound: true]))
         frame.physicsBody = body
         
+        let v_frontLeftWheel  = SCNPhysicsVehicleWheel(node: frame.childNode(withName: "frontLeftParent",
+                                                                             recursively: false) ?? SCNNode())
+        let v_frontRightWheel = SCNPhysicsVehicleWheel(node: frame.childNode(withName: "frontRightParent",
+                                                                             recursively: false) ?? SCNNode())
+        let v_rearLeftWheel   = SCNPhysicsVehicleWheel(node: frame.childNode(withName: "rearLeftParent",
+                                                                             recursively: false) ?? SCNNode())
+        let v_rearRightWheel  = SCNPhysicsVehicleWheel(node: frame.childNode(withName: "rearRightParent",
+                                                                             recursively: false) ?? SCNNode())
+        
+        
+        self.vehicle = SCNPhysicsVehicle(chassisBody: frame.physicsBody ?? SCNPhysicsBody(),
+                                         wheels: [v_rearLeftWheel, v_rearRightWheel,
+                                                  v_frontLeftWheel, v_frontRightWheel])
+        sceneView.scene.physicsWorld.addBehavior(self.vehicle)
         sceneView.scene.rootNode.addChildNode(frame)
+    }
+    
+    func setupAccelerometer() {
+        if motionManager.isAccelerometerAvailable {
+            motionManager.accelerometerUpdateInterval = 1/60
+            motionManager.startAccelerometerUpdates(to: .main) { (accelerometerData, error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+                if let acceleration = accelerometerData?.acceleration {
+                    self.accelerometerDidChange(acceleration: acceleration)
+                }
+            }
+        } else {
+            print("Accelerometer not available.")
+        }
+    }
+    
+    func accelerometerDidChange(acceleration: CMAcceleration) {
+        print(acceleration.x)
+        print(acceleration.y)
+        print(" ")
     }
     
 }
